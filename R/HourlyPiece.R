@@ -65,12 +65,11 @@ HourlyPieceUI_left <- function() {
 #' HourlyPieceUI_bottom()
 HourlyPieceUI_right <- function() {
   res <- tagList(
-    tsui::mdl_text2(id = 'text_HourlyPiece_FBillno',label = '请输入需要查询的生产订单号'),
-    tsui::layout_2C(x = tsui::mdl_text2(id = 'text_HourlyPiece_FBillno_delete',label = '请输入需要删除的生产订单号'),
-                    y=tsui::mdl_text2(id = 'text_HourlyPiece_Fseq_delete',label = '请输入需要删除的生产订单行号')),
+    tsui::mdl_text2(id = 'text_HourlyPiece_FProductionNumber',label = '请输入需要查询的生产批号'),
+    tsui::mdl_text2(id = 'text_HourlyPiece_FProductionNumber_delete',label = '请输入需要删除的生产批号'),
 
 
-    shiny::actionButton(inputId = 'btn_HourlyPiece_view',label = '按生产订单号查询'),
+    shiny::actionButton(inputId = 'btn_HourlyPiece_view',label = '按生产批号查询'),
 
     shiny::actionButton(inputId = 'btn_HourlyPiece_delete',label = '删除数据'),
 
