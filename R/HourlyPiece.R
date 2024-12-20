@@ -42,12 +42,10 @@ HourlyPieceUI_left <- function() {
 
 
   res <- tagList(
-    tsui::uiTemplate(templateName = '博宇翔鹰计时计件工资模板表'),
-    tsui::mdl_file(id = 'file_HourlyPiece',label = '请上传文件'),
-
-    shiny::actionButton(inputId = 'btn_HourlyPiece_pre',label = '预览文件内容'),
-
-    shiny::actionButton(inputId = 'btn_HourlyPiece_upload',label = '上传文件')
+    #tsui::uiTemplate(templateName = '计时计件工资模块'),
+    #tsui::mdl_file(id = 'file_HourlyPiece',label = '请上传文件'),
+    tsui::mdl_text2(id = 'text_HourlyPiece_FYEAR',label = '请输入年份'),
+    tsui::mdl_text2(id = 'text_HourlyPiece_FMONTH',label = '请输入月份')
 
 
   )
@@ -65,16 +63,18 @@ HourlyPieceUI_left <- function() {
 #' HourlyPieceUI_bottom()
 HourlyPieceUI_right <- function() {
   res <- tagList(
-    tsui::mdl_text2(id = 'text_HourlyPiece_FProductionNumber',label = '请输入需要查询的生产批号'),
-    tsui::mdl_text2(id = 'text_HourlyPiece_FProductionNumber_delete',label = '请输入需要删除的生产批号'),
 
 
-    shiny::actionButton(inputId = 'btn_HourlyPiece_view',label = '按生产批号查询'),
 
-    shiny::actionButton(inputId = 'btn_HourlyPiece_delete',label = '删除数据'),
+    shiny::actionButton(inputId = 'btn_HourlyPiece_detail_view',label = '查询工资明细表'),
+    tsui::mdl_download_button(id = 'dl_HourlyPiece_detail',label = '下载明细数据'),
+
+    shiny::actionButton(inputId = 'btn_HourlyPiece_view',label = '查询工资汇总表'),
+    tsui::mdl_download_button(id = 'dl_HourlyPiece',label = '下载汇总数据')
+
 
    # shiny::actionButton(inputId = 'btn_HourlyPiece_download',label = '下载数据'),
-    tsui::mdl_download_button(id = 'dl_HourlyPiece',label = '下载数据')
+
 
 
 

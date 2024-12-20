@@ -1,7 +1,7 @@
 Package: mdlHourlyPiecerateUI
 Type: Package
 Title: UI Package For DMS mdlHourlyPiecerate Module in R
-Version: 1.0.1
+Version: 1.0.2
 Author: hulilei
 Maintainer: hulilei <hulilei@takewiki.com.cn>
 Description: More about what it does (maybe more than one line)
@@ -12,3 +12,9 @@ LazyData: true
 RoxygenNote: 7.1.1
 Collate: 
     'HourlyPiece.R'
+    'HourlyWages.R'
+    'HourlyRouting.R'
+    'productRouting.R'
+    'productprice.R'
+    'productdaily.R'
+    'Handywages.R'
